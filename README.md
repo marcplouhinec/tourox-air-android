@@ -1,5 +1,5 @@
-Tourox for Android
-==================
+Tourox Air for Android
+======================
 
 Tired of raising your voice when talking to your tourist group? Tourox Air is a smart voice
 assistant created with the tour guide in mind! Tourox Air lets the visitors use their own mobile
@@ -29,7 +29,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-![LGPL-v3 logo](http://www.gnu.org/graphics/lgplv3-147x51.png)
+![GPL-v3 logo](http://www.gnu.org/graphics/gplv3-127x51.png)
 
 Credits
 -------
