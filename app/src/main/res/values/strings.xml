@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Tourox</string>
+
+    <string name="app_subtitle">Listen to your guide comfortably!</string>
+    <string name="step_carousel_image">Application step</string>
+    <string name="step1_description">Connecting to the router…</string>
+    <string name="step1_error_description">Error: unable to connect with the router VoIP!</string>
+    <string name="step2_description">Waiting for the guide to start the communication…</string>
+    <string name="step3_description">Communication ongoing</string>
+    <string name="volume_mute">Volume down</string>
+    <string name="volume_up">Volume up</string>
+
+    <string name="no_wifi_connection_error_title">No WIFI connection detected!</string>
+    <string name="no_wifi_connection_error_message">Please connect to the guide\'s WIFI router and restart the application.</string>
+    <string name="wrong_wifi_connection_error_title">Wrong WIFI connection detected!</string>
+    <string name="wrong_wifi_connection_error_message">Please connect to a WIFI network starting with the word \'tourox\' and restart the application.</string>
+    <string name="unable_to_load_voip_service_error_title">Internal error</string>
+    <string name="unable_to_load_voip_service_error_message">Unable to load the VoIP service! You may try to restart the application, but if it still doesn\'t work it means your device is incompatible.</string>
+    <string name="unable_to_open_connection_to_voip_service_error_title">Connection error</string>
+    <string name="unable_to_open_connection_to_voip_service_error_message">Unable to open a connection to the VoIP service. Please restart the application to try again.</string>
+    <string name="ignore_error_title">Ignore an error</string>
+    <string name="ignore_error_message">You chose to ignore an error. Please note that the application cannot run normally. Are you sure you really want to continue?</string>
+    <string name="ok_button">OK</string>
+    <string name="ignore_button">Ignore</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="exit_button">Exit</string>
+</resources>

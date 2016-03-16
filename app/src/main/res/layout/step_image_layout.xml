@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <io.tourox.mobileapp.activities.stepcarousel.StepCarouselLinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/stepImageView"
+            android:src="@drawable/step1"
+            android:contentDescription="@string/step_carousel_image" />
+
+    </io.tourox.mobileapp.activities.stepcarousel.StepCarouselLinearLayout>
+</LinearLayout>

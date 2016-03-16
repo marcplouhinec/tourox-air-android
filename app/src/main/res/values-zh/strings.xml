@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Tourox</string>
+
+    <string name="ignore_button">忽略</string>
+    <string name="confirm_button">确认</string>
+    <string name="exit_button">退出</string>
+    <string name="app_subtitle">轻松地聆听你的导游!</string>
+    <string name="ignore_error_message">注意!你选择了忽略程序的故障,应用程序将无法正常运行.你确定将要继续吗?</string>
+    <string name="ignore_error_title">忽略错误</string>
+    <string name="no_wifi_connection_error_message">请连接导游的无线路由器,然后重新启动该程序.</string>
+    <string name="no_wifi_connection_error_title">没有检测到任何无线网络链接!</string>
+    <string name="ok_button">确认</string>
+    <string name="step1_description">正在连接…</string>
+    <string name="step1_error_description">故障: 无法连接网络电话！</string>
+    <string name="step2_description">等待导游开始通话…</string>
+    <string name="step3_description">正在通话</string>
+    <string name="step_carousel_image">通话步骤</string>
+    <string name="unable_to_load_voip_service_error_message">无法下载通话程序!请重新启动该应用程序,如果仍然不能运作说明您的设备与该软件并不兼容。</string>
+    <string name="unable_to_load_voip_service_error_title">内部故障</string>
+    <string name="unable_to_open_connection_to_voip_service_error_message">无法连接通话,请重新启动.</string>
+    <string name="unable_to_open_connection_to_voip_service_error_title">连接错误</string>
+    <string name="volume_mute">调低音量</string>
+    <string name="volume_up">调高音量</string>
+    <string name="wrong_wifi_connection_error_message">请连接\'tourox\'的无线网络,然后重新启动该应用程序.</string>
+    <string name="wrong_wifi_connection_error_title">连接错误无线网络!</string>
+</resources>

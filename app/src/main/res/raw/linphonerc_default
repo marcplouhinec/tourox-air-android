@@ -1,0 +1,24 @@
+[net]
+download_bw=0
+upload_bw=0
+use_nat=0
+use_stun=0
+use_ipv6=0
+
+[sip]
+contact="Tourox visitor" <sip:u100@tourox.net>
+use_info=0
+use_ipv6=0
+keepalive_period=30000
+
+[video]
+enabled=0
+size=qvga
+
+[app]
+sharing_server=https://www.linphone.org:444/upload.php
+tunnel=disabled
+
+[tunnel]
+host=
+port=443

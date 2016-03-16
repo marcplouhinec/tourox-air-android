@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Tourox</string>
+
+    <string name="app_subtitle">Можете да чуете вашия екскурзовод</string>
+    <string name="step_carousel_image">Автоматични настройки</string>
+    <string name="step1_description">Свързване с рутера…</string>
+    <string name="step1_error_description">Грешка: неуспешно свързване с гласовия рутер</string>
+    <string name="step2_description">Изчакване на свързване с екскурзовода…</string>
+    <string name="step3_description">Вие се свързахте с екскурзовода</string>
+    <string name="volume_mute">Намаляване на звука</string>
+    <string name="volume_up">Увеличаване на звука</string>
+
+    <string name="no_wifi_connection_error_title">Няма WiFi връзка</string>
+    <string name="no_wifi_connection_error_message">Моля, свържете се с рутера на екскурзовода и рестартирайте приложението.</string>
+    <string name="wrong_wifi_connection_error_title">Свързани сте с друга WiFi мрежа</string>
+    <string name="wrong_wifi_connection_error_message">Моля, свържете се с безжична мрежа, която започва с думата \'tourox\' и рестартирайте приложението.</string>
+    <string name="unable_to_load_voip_service_error_title">Системна грешка</string>
+    <string name="unable_to_load_voip_service_error_message">Неуспешно зареждане на VoIP услуга! Опитайте да рестартирате приложението, но ако това не помогне, вероятно телефонът ви не е съвместим.</string>
+    <string name="unable_to_open_connection_to_voip_service_error_title">Грешка при свързване</string>
+    <string name="unable_to_open_connection_to_voip_service_error_message">Неуспешно установяване на връзка с гласовата услуга. Моля, рестартирайте приложението, за да започнете отначало.</string>
+    <string name="ignore_error_title">Продължаване въпреки грешката</string>
+    <string name="ignore_error_message">Вие избрахте да продължите въпреки съобщение за грешка. Имайте предвид, че приложението няма да работи правилно. Сигурни ли сте, че искате да продължите?</string>
+    <string name="ok_button">ОК</string>
+    <string name="ignore_button">Игнориране</string>
+    <string name="confirm_button">Потвърждаване</string>
+    <string name="exit_button">Изход</string>
+</resources>
