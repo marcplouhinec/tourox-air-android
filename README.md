@@ -10,7 +10,7 @@ Please note that this application only works when connected via WiFi to the tour
 If you are a professional working in the tourism industry and are interested in buying or selling
 our Tourox platform, please contact us via email at contact@tourox.io.
 
-For more information, please look at our website: www.tourox.io.
+For more information, please look at our website: http://www.tourox.io.
 
 Licence
 -------
