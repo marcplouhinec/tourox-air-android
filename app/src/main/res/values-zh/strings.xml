@@ -12,8 +12,7 @@
     <string name="ok_button">确认</string>
     <string name="step1_description">正在连接…</string>
     <string name="step1_error_description">故障: 无法连接网络电话！</string>
-    <string name="step2_description">等待导游开始通话…</string>
-    <string name="step3_description">正在通话</string>
+    <string name="step2_description">正在通话</string>
     <string name="step_carousel_image">通话步骤</string>
     <string name="unable_to_load_voip_service_error_message">无法下载通话程序!请重新启动该应用程序,如果仍然不能运作说明您的设备与该软件并不兼容。</string>
     <string name="unable_to_load_voip_service_error_title">内部故障</string>

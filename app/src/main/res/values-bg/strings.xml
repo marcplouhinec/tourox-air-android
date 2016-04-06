@@ -5,8 +5,7 @@
     <string name="step_carousel_image">Автоматични настройки</string>
     <string name="step1_description">Свързване с рутера…</string>
     <string name="step1_error_description">Грешка: неуспешно свързване с гласовия рутер</string>
-    <string name="step2_description">Изчакване на свързване с екскурзовода…</string>
-    <string name="step3_description">Вие се свързахте с екскурзовода</string>
+    <string name="step2_description">Вие се свързахте с екскурзовода</string>
     <string name="volume_mute">Намаляване на звука</string>
     <string name="volume_up">Увеличаване на звука</string>
 

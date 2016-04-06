@@ -5,8 +5,7 @@
     <string name="step_carousel_image">Etape de l\'application</string>
     <string name="step1_description">Connexion au routeur…</string>
     <string name="step1_error_description">Erreur: impossible de se connecter au routeur VoIP!</string>
-    <string name="step2_description">En attente du guide pour commencer la communication…</string>
-    <string name="step3_description">Communication en cours</string>
+    <string name="step2_description">Communication en cours</string>
     <string name="volume_mute">Diminution du volume</string>
     <string name="volume_up">Augmentation du volume</string>
 

@@ -40,6 +40,9 @@ public class VoipServiceImpl implements VoipService {
     private LinphoneCore linphoneCore = null;
     private VoipConnectionState currentVoipConnectionState = VoipConnectionState.NOT_CONNECTED;
 
+    private volatile String hostname = null;
+    private volatile boolean isInConference = false;
+
     @Override
     public void initialize(Context context) throws IOException, PackageManager.NameNotFoundException {
         String basePath = context.getFilesDir().getAbsolutePath();
@@ -78,6 +81,8 @@ public class VoipServiceImpl implements VoipService {
 
     @Override
     public void openConnection(String username, String password, String hostname) throws IOException {
+        this.hostname = hostname;
+
         try {
             LinphoneAuthInfo authInfo = LinphoneCoreFactory.instance().createAuthInfo(username, password, null, hostname);
             linphoneCore.addAuthInfo(authInfo);
@@ -95,7 +100,11 @@ public class VoipServiceImpl implements VoipService {
         TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
-                linphoneCore.iterate();
+                try {
+                    linphoneCore.iterate();
+                } catch (Throwable t) {
+                    Log.e(TAG, "An error occurred while iterating on the linphoneCore: " + t.getMessage(), t);
+                }
             }
         };
         timer = new Timer("Tourox Linphone scheduler");
@@ -106,10 +115,15 @@ public class VoipServiceImpl implements VoipService {
 
     @Override
     public void closeConnection() {
+        isInConference = false;
+
+        Log.i(TAG, "Close the current connection...");
         if (linphoneCore != null) {
             LinphoneCall currentCall = linphoneCore.getCurrentCall();
-            if (currentCall != null)
+            if (currentCall != null) {
+                Log.i(TAG, "Close the current call...");
                 linphoneCore.terminateCall(currentCall);
+            }
         }
 
         if (timer != null)
@@ -119,6 +133,7 @@ public class VoipServiceImpl implements VoipService {
             linphoneCore.setNetworkReachable(false);
 
         notifyVoipConnectionStateChange(VoipConnectionState.NOT_CONNECTED);
+        Log.i(TAG, "Current connection closed.");
     }
 
     @Override
@@ -170,23 +185,24 @@ public class VoipServiceImpl implements VoipService {
         public void registrationState(LinphoneCore linphoneCore, LinphoneProxyConfig linphoneProxyConfig, LinphoneCore.RegistrationState state, String message) {
             Log.i(TAG, "Linphone registrationState: " + state + ", " + message);
             if (state == LinphoneCore.RegistrationState.RegistrationOk || state == LinphoneCore.RegistrationState.RegistrationProgress) {
-                notifyVoipConnectionStateChange(VoipConnectionState.CONNECTED_WAITING_FOR_CALL);
+                // Automatically dial to the conference as a visitor (muted)
+                if (!isInConference) {
+                    try {
+                        linphoneCore.invite("sip:2@" + hostname);
+                        isInConference = true;
+                    } catch (LinphoneCoreException e) {
+                        Log.e(TAG, "Unable to dial to the conference: " + e.getMessage(), e);
+                    }
+                }
             }
         }
 
         @Override
         public void callState(LinphoneCore linphoneCore, LinphoneCall linphoneCall, LinphoneCall.State state, String message) {
             Log.i(TAG, "Linphone callState: " + state + ", " + message);
-            if (state == LinphoneCall.State.IncomingReceived) {
-                try {
-                    linphoneCore.acceptCall(linphoneCall);
 
-                    notifyVoipConnectionStateChange(VoipConnectionState.ONGOING_CALL);
-                } catch (LinphoneCoreException e) {
-                    Log.e(TAG, "Unable to accept a call: " + e.getMessage(), e);
-                }
-            } else if (state == LinphoneCall.State.Error || state == LinphoneCall.State.CallEnd || state == LinphoneCall.State.CallReleased) {
-                notifyVoipConnectionStateChange(VoipConnectionState.CONNECTED_WAITING_FOR_CALL);
+            if (state == LinphoneCall.State.Connected) {
+                notifyVoipConnectionStateChange(VoipConnectionState.ONGOING_CALL);
             }
         }
 

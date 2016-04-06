@@ -19,7 +19,7 @@ import io.tourox.mobileapp.R;
  */
 public class StepCarouselAdapter extends FragmentPagerAdapter implements ViewPager.OnPageChangeListener {
 
-    private static final List<Integer> STEP_DESCRIPTION_RESOURCE_IDS = Arrays.asList(R.string.step1_description, R.string.step2_description, R.string.step3_description);
+    private static final List<Integer> STEP_DESCRIPTION_RESOURCE_IDS = Arrays.asList(R.string.step1_description, R.string.step2_description);
     private final static int STEP_CAROUSEL_PAGES = STEP_DESCRIPTION_RESOURCE_IDS.size();
     public final static float STEP_CAROUSEL_BIG_SCALE = 1.0f;
     private final static float STEP_CAROUSEL_SMALL_SCALE = 0.6f;

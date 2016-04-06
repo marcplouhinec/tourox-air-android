@@ -21,8 +21,6 @@ import android.widget.TextView;
 
 import org.linphone.compatibility.Compatibility;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -187,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
             // Compute the configuration
             String formattedIp = Formatter.formatIpAddress(ipAddress);
             final String username = "u" + formattedIp.substring(formattedIp.lastIndexOf('.') + 1);
-            final String hostname = formattedIp.substring(0, formattedIp.lastIndexOf('.')) + ".254";
+            final String hostname = formattedIp.substring(0, formattedIp.lastIndexOf('.')) + ".1";
             Log.i(TAG, "Computed configuration: username = " + username + ", hostname = " + hostname);
 
             // Open the connection with the VoIP server
@@ -262,9 +260,6 @@ public class MainActivity extends AppCompatActivity {
             case UNABLE_TO_CONNECT:
                 stepCarouselViewPager.setCurrentItem(0);
                 stepDescriptionTextView.setText(R.string.step1_error_description);
-                break;
-            case CONNECTED_WAITING_FOR_CALL:
-                stepCarouselViewPager.setCurrentItem(1);
                 break;
             case ONGOING_CALL:
                 stepCarouselViewPager.setCurrentItem(2);

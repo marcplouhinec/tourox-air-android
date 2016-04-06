@@ -16,7 +16,7 @@ import io.tourox.mobileapp.R;
  * Created by Marc Plouhinec on 05/03/16.
  */
 public class StepCarouselLinearLayout extends LinearLayout {
-    private final List<Integer> stepDrawableIds = Arrays.asList(R.drawable.step1, R.drawable.step2, R.drawable.step3);
+    private final List<Integer> stepDrawableIds = Arrays.asList(R.drawable.step1, R.drawable.step2);
     private float scale = StepCarouselAdapter.STEP_CAROUSEL_BIG_SCALE;
 
     public StepCarouselLinearLayout(Context context) {
