@@ -7,10 +7,14 @@ phones to listen to the guide's voice. No need to carry around multiple audio de
 
 Please note that this application only works when connected via WiFi to the tour guide's device.
 
-If you are a professional working in the tourism industry and are interested in buying or selling
+If you are a professional working in the tourism industry and are interested in using or reselling
 our Tourox platform, please contact us via email at contact@tourox.io.
 
 For more information, please look at our website: http://www.tourox.io.
+
+Running the app
+---------------
+The application needs a server to run, [here is a procedure explaining how to do it](https://github.com/marcplouhinec/tourox-air-test-server).
 
 Licence
 -------
